@@ -43,8 +43,8 @@ music.forEach(task4);
 function task4(element) {
     let wordArr = spliter(element);
     let frequency = letterCounter(element);
-    console.log('\nСлова в строке: ' + wordArr);
-    for(let i = 0; i < frequency.symbol.length; i++)
+    console.log('\nСлова в строке:' + wordArr);
+    for (let i = 0; i < frequency.symbol.length; i++)
     console.log('Кол-во символов "' + frequency.symbol[i] + '": ' + frequency.number[i]);
 }
 
@@ -53,22 +53,22 @@ function spliter(music) {
 }
 
 function letterCounter(music) {
-    let letters = {char:[], number:[]};
-    let charmas = music.split('');
-    letters.symbol = unique(charmas);
-    letters.symbol.forEach(function(element) {
-        letters.number.push(charmas.filter(x => x === element).length);
-    });
-    return letters;
+  let letters = {char:[], number:[]};
+  let charmas = music.split('');
+  letters.symbol = unique(charmas);
+  letters.symbol.forEach(function(element) {
+    letters.number.push(charmas.filter(x => x === element).length);
+  });
+  return letters;
 }
 
 function unique(charmas) {
-    let result = [];
-    charmas.forEach(function(element){
-        if(result.indexOf(element) == '-1')
-        result.push(element);
+  let result = [];
+  charmas.forEach(function(element) {
+    if(result.indexOf(element) == '-1')
+      result.push(element);
     });
-    return result;
+  return result;
 }
 
 
