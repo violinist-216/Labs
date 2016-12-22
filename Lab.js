@@ -15,7 +15,7 @@ console.log('Вывод массива:', music);
 // Задание  №2
 // Фильтрация по строчной букве
 
-var smallLetter = music.filter(x => x[0] === x[0].toLowerCase());
+let smallLetter = music.filter(x => x[0] === x[0].toLowerCase());
 
 console.log('Вывод массива, отфильтрованного по строчной букве:\n');
 console.log(smallLetter);
@@ -50,12 +50,11 @@ function task4(element) {
 }
 
 function spliter(music) {
-    if(music.includes('-')) return music.split('-');
-    else return music;
+    return music.includes('-') ? music.split('-') : music;
 }
 
 function letterCounter(music) {
-    let letters = {symbol:[], number:[]};
+    let letters = {char:[], number:[]};
     let charmas = music.split('');
     letters.symbol = unique(charmas);
     letters.symbol.forEach(function(element) {
