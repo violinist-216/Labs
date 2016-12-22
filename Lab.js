@@ -23,15 +23,14 @@ console.log(smallLetter);
 //  Задание №3
 // Отсортировать массив по количеству  слов
 
-console.log('Массив отфильрованый по количеству слов:\n\n',music.sort(function(a,b){
-	if(a.split(" ").length>b.split(" ").length){
-		return 1;
-	}
-	if(a.split(" ")<b.split(" ")){
-		return -1;
-	}
-	return 0;
-
+console.log('Массив отфильрованый по количеству слов:\n\n', music.sort(function(a, b) {
+  if(a.split(" ").length > b.split(" ").length) {
+    return 1;
+  }
+  if(a.split(" ") < b.split(" ")) {
+    return -1;
+  }
+  return 0;
 }));
 
 // Задание №4
